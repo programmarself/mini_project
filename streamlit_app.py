@@ -13,7 +13,12 @@ instructors = [
     {'name': 'Ubaid Ur Rehman', 'subject': 'Software Engineer | Section Leader',
      'address': 'Islāmābād, Pakistan', 'contact': 'ubaid_ur_Rehman@gmail.com',
      'linkedin': 'https://www.linkedin.com/in/iubaidrmn/', 'github': 'https://github.com/',
+     'classes': 'Tuesday, Thursday'},
+    {'name': 'Laiba Asif', 'subject': 'Python | AI Enthusiast | Data analyst',
+     'address': 'Jhang District, Punjab, Pakistan  ', 'contact': 'laibasif99@gmail.com',
+     'linkedin': 'https://www.linkedin.com/in/laiba-asif-8544a0277/', 'github': 'https://github.com/',
      'classes': 'Tuesday, Thursday'}
+
 ]
 
 # Function to display all instructors
