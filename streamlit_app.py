@@ -20,17 +20,17 @@ instructors = [
 def display_instructors():
     st.subheader('Our Beloved Python For Beginners Instructors:')
     for idx, instructor in enumerate(instructors, 1):
-        st.markdown(f"<p style='font-size: 18px; color: #3a7ca5;'><b>{idx}. {instructor['name']}</b></p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 18px; color: #1e90ff;'><b>{idx}. {instructor['name']}</b></p>", unsafe_allow_html=True)
 
 # Function to display instructor's detailed information
 def view_instructors_info(instructor_number):
     instructor = instructors[instructor_number]
-    st.markdown(f"<h3 style='color: #2d89a1;'>{instructor['name']}</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='color: #ff8c00;'>{instructor['name']}</h3>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Subject:</b> {instructor['subject']}</p>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Address:</b> {instructor['address']}</p>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Contact:</b> {instructor['contact']}</p>", unsafe_allow_html=True)
-    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>LinkedIn:</b> <a href='{instructor['linkedin']}' style='color: #2a5d84;'>LinkedIn Profile</a></p>", unsafe_allow_html=True)
-    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>GitHub:</b> <a href='{instructor['github']}' style='color: #2a5d84;'>GitHub Profile</a></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>LinkedIn:</b> <a href='{instructor['linkedin']}' style='color: #ff6347;'>LinkedIn Profile</a></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>GitHub:</b> <a href='{instructor['github']}' style='color: #ff6347;'>GitHub Profile</a></p>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Classes:</b> {instructor['classes']}</p>", unsafe_allow_html=True)
 
 # Function to add a new instructor
@@ -88,42 +88,49 @@ def main():
     st.markdown("""
         <style>
         body {
-            background: linear-gradient(135deg, #FFBC00, #FF6F00);
-            font-family: 'Arial', sans-serif;
+            background: linear-gradient(145deg, #ff8c00, #ff6347);
+            font-family: 'Roboto', sans-serif;
             color: #fff;
         }
         .stButton>button {
-            background-color: #0078D4;
+            background-color: #ff6347;
             color: white;
             font-weight: bold;
             border-radius: 8px;
             padding: 12px 24px;
         }
         .stButton>button:hover {
-            background-color: #005A8B;
+            background-color: #ff4500;
         }
         .sidebar .sidebar-content {
-            background-color: #FF5E14;
+            background-color: #ff6a00;
             color: #fff;
         }
         .sidebar .sidebar-header {
             color: #fff;
         }
         .stTextInput input {
-            background-color: #F5F5F5;
+            background-color: #f5f5f5;
             color: #333;
             padding: 10px;
             border-radius: 8px;
             border: 1px solid #ddd;
         }
         h1, h2, h3 {
-            color: #FFFFFF;
+            color: #fff;
         }
         .footer {
-            font-size: 12px;
+            font-size: 14px;
             text-align: center;
-            color: #999;
+            color: #ddd;
             margin-top: 30px;
+        }
+        .footer a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #ff4500;
         }
         </style>
     """, unsafe_allow_html=True)
@@ -152,10 +159,10 @@ def main():
         if instructor_number is not None:
             update_instructor(instructor_number)
 
-    # Footer
+    # Footer with developer info
     st.markdown("""
         <div class="footer">
-            <p>Developed by: <strong>IRFAN ULLAH KAHN</strong></p>
+            <p>Developed by: <strong><a href="https://www.linkedin.com/in/irfan-ullah-khan/" target="_blank">IRFAN ULLAH KAHN</a></strong></p>
         </div>
     """, unsafe_allow_html=True)
 
