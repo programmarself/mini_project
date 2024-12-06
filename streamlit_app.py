@@ -25,7 +25,7 @@ def display_instructors():
 # Function to display instructor's detailed information
 def view_instructors_info(instructor_number):
     instructor = instructors[instructor_number]
-    st.markdown(f"<h3 style='color: #ff8c00;'>{instructor['name']}</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='color: #ff0000;'>{instructor['name']}</h3>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Subject:</b> {instructor['subject']}</p>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Address:</b> {instructor['address']}</p>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Contact:</b> {instructor['contact']}</p>", unsafe_allow_html=True)
@@ -117,7 +117,7 @@ def main():
             border: 1px solid #ddd;
         }
         h1, h2, h3 {
-            color: #fff;
+            color: #ff0000; /* Red color for header */
         }
         .footer {
             font-size: 14px;
