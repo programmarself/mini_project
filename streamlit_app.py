@@ -2,16 +2,16 @@ import streamlit as st
 
 # Instructors data
 instructors = [
-    {'name': 'Fatima Malik', 'subject': 'WordPress Designer & Developer|Physicist',
+    {'name': 'Fatima Malik', 'subject': 'WordPress Designer & Developer | Physicist',
      'address': 'Okara District, Punjab, Pakistan', 'contact': '7223fatimamalik@gmail.com',
      'linkedin': 'https://www.linkedin.com/in/fatima-malik99/', 'github': 'https://github.com/fatima-malik99',
      'classes': 'Monday, Wednesday, Friday'},
     {'name': 'Sana Raza', 'subject': 'Biomedical Engineer | Technical Content Writer',
-     'address': 'Karachi, Sindh, Pakistan', 'contact': 'sana.raxa321@gmail.com',
+     'address': 'Karāchi, Sindh, Pakistan', 'contact': 'sana.raxa321@gmail.com',
      'linkedin': 'https://www.linkedin.com/in/sana-raza-engineer/', 'github': 'https://github.com/Sanarazaaa',
      'classes': 'Monday, Thursday, Saturday'},
     {'name': 'Ubaid Ur Rehman', 'subject': 'Software Engineer | Section Leader',
-     'address': 'Islamabad, Pakistan', 'contact': 'ubaid_ur_Rehman@gmail.com',
+     'address': 'Islāmābād, Pakistan', 'contact': 'ubaid_ur_Rehman@gmail.com',
      'linkedin': 'https://www.linkedin.com/in/iubaidrmn/', 'github': 'https://github.com/',
      'classes': 'Tuesday, Thursday'}
 ]
@@ -20,23 +20,22 @@ instructors = [
 def display_instructors():
     st.subheader('Our Beloved Python For Beginners Instructors:')
     for idx, instructor in enumerate(instructors, 1):
-        st.write(f"{idx}. {instructor['name']}")
+        st.markdown(f"**{idx}. {instructor['name']}**")
 
 # Function to display instructor's detailed information
 def view_instructors_info(instructor_number):
     instructor = instructors[instructor_number]
-    st.write(f"### Name: {instructor['name']}")
-    st.write(f"**Subject:** {instructor['subject']}")
-    st.write(f"**Address:** {instructor['address']}")
-    st.write(f"**Contact:** {instructor['contact']}")
-    st.write(f"**LinkedIn:** [{instructor['linkedin']}]({instructor['linkedin']})")
-    st.write(f"**GitHub:** [{instructor['github']}]({instructor['github']})")
-    st.write(f"**Classes:** {instructor['classes']}")
+    st.markdown(f"### {instructor['name']}")
+    st.markdown(f"**Subject:** {instructor['subject']}")
+    st.markdown(f"**Address:** {instructor['address']}")
+    st.markdown(f"**Contact:** {instructor['contact']}")
+    st.markdown(f"**LinkedIn:** [{instructor['linkedin']}]({instructor['linkedin']})")
+    st.markdown(f"**GitHub:** [{instructor['github']}]({instructor['github']})")
+    st.markdown(f"**Classes:** {instructor['classes']}")
 
 # Function to add a new instructor
 def add_instructor():
     st.subheader("Add New Instructor")
-
     name = st.text_input("Instructor's Name")
     subject = st.text_input("Instructor's Subject Specialty")
     address = st.text_input("Instructor's Address")
@@ -83,7 +82,37 @@ def update_instructor(instructor_number):
 
 # Streamlit main function
 def main():
+    st.set_page_config(page_title="Instructors Management System", page_icon="📚", layout="wide")
+
+    # Custom CSS for styling
+    st.markdown("""
+        <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+        }
+        .sidebar .sidebar-content {
+            background-color: #2D3E50;
+        }
+        .stButton>button {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        .stButton>button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            font-size: 12px;
+            text-align: center;
+            color: #999;
+            margin-top: 20px;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
     st.title("Instructors Management System (IMS)")
+    st.markdown("---")
 
     # Sidebar for navigation
     st.sidebar.title("Menu")
@@ -105,6 +134,13 @@ def main():
         instructor_number = st.number_input("Enter Instructor Number (1-3)", min_value=1, max_value=len(instructors), step=1) - 1
         if instructor_number is not None:
             update_instructor(instructor_number)
+
+    # Footer
+    st.markdown("""
+        <div class="footer">
+            <p>Developed by: <strong>IRFAN ULLAH KAHN</strong></p>
+        </div>
+    """, unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()
