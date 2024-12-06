@@ -11,7 +11,7 @@ Special Tanks to My Respected :
 3. Ubaid Ur Rehman
 [LinkedIn Profile](https://www.linkedin.com/in/iubaidrmn/)
 4. Laiba Asif
-[LinkedIn Profile]([https://www.linkedin.com/in/iubaidrmn/](https://www.linkedin.com/in/laiba-asif-8544a0277/))
+[LinkedIn Profile](https://www.linkedin.com/in/laiba-asif-8544a0277/)
 
 Google Colab Link: [google colab](https://colab.research.google.com/drive/1SUu11mQIvnkmSDSqHF2teEj6pA7GtwlF?usp=sharing)
 
