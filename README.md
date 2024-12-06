@@ -25,4 +25,4 @@ Mini Poject Live : [Mini Project](https://miniproj.streamlit.app/)
 
 [![YouTube](https://img.shields.io/badge/YouTube-Profile-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@irfanullahkhan7748) 
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=email)](mailto:programmarself@gmail.com)
-[![Website](https://img.shields.io/badge/Website-Contact%20Me-red?style=for-the-badge&logo=website)](https://flowcv.me/ikm)
+[![Website](https://img.shields.io/badge/Website-Contact%20Me-red?style=for-the-badge&logo=website)]([https://flowcv.me/ikm](https://programmarself.github.io/My_Portfolio/))
