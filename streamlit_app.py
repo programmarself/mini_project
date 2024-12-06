@@ -167,7 +167,7 @@ def main():
     # Footer with developer info
     st.markdown("""
         <div class="footer">
-            <p>Developed by: <strong><a href="https://https://www.linkedin.com/in/iukhan/" target="_blank">IRFAN ULLAH KAHN</a></strong></p>
+            <p>Developed by: <strong><a href="https://www.linkedin.com/in/iukhan/" target="_blank">IRFAN ULLAH KAHN</a></strong></p>
         </div>
     """, unsafe_allow_html=True)
 
