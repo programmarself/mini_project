@@ -20,29 +20,29 @@ instructors = [
 def display_instructors():
     st.subheader('Our Beloved Python For Beginners Instructors:')
     for idx, instructor in enumerate(instructors, 1):
-        st.markdown(f"**{idx}. {instructor['name']}**")
+        st.markdown(f"<p style='font-size: 18px; color: #3a7ca5;'><b>{idx}. {instructor['name']}</b></p>", unsafe_allow_html=True)
 
 # Function to display instructor's detailed information
 def view_instructors_info(instructor_number):
     instructor = instructors[instructor_number]
-    st.markdown(f"### {instructor['name']}")
-    st.markdown(f"**Subject:** {instructor['subject']}")
-    st.markdown(f"**Address:** {instructor['address']}")
-    st.markdown(f"**Contact:** {instructor['contact']}")
-    st.markdown(f"**LinkedIn:** [{instructor['linkedin']}]({instructor['linkedin']})")
-    st.markdown(f"**GitHub:** [{instructor['github']}]({instructor['github']})")
-    st.markdown(f"**Classes:** {instructor['classes']}")
+    st.markdown(f"<h3 style='color: #2d89a1;'>{instructor['name']}</h3>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Subject:</b> {instructor['subject']}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Address:</b> {instructor['address']}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Contact:</b> {instructor['contact']}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>LinkedIn:</b> <a href='{instructor['linkedin']}' style='color: #2a5d84;'>LinkedIn Profile</a></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>GitHub:</b> <a href='{instructor['github']}' style='color: #2a5d84;'>GitHub Profile</a></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Classes:</b> {instructor['classes']}</p>", unsafe_allow_html=True)
 
 # Function to add a new instructor
 def add_instructor():
     st.subheader("Add New Instructor")
-    name = st.text_input("Instructor's Name")
-    subject = st.text_input("Instructor's Subject Specialty")
-    address = st.text_input("Instructor's Address")
-    contact = st.text_input("Instructor's Contact Email")
-    linkedin = st.text_input("Instructor's LinkedIn URL")
-    github = st.text_input("Instructor's GitHub URL")
-    classes = st.text_input("Classes (e.g., 'Monday, Wednesday')")
+    name = st.text_input("Instructor's Name", placeholder="Enter Instructor's Full Name")
+    subject = st.text_input("Instructor's Subject Specialty", placeholder="Enter Instructor's Subject Specialty")
+    address = st.text_input("Instructor's Address", placeholder="Enter Instructor's Address")
+    contact = st.text_input("Instructor's Contact Email", placeholder="Enter Instructor's Contact Email")
+    linkedin = st.text_input("Instructor's LinkedIn URL", placeholder="Enter Instructor's LinkedIn URL")
+    github = st.text_input("Instructor's GitHub URL", placeholder="Enter Instructor's GitHub URL")
+    classes = st.text_input("Classes (e.g., 'Monday, Wednesday')", placeholder="Enter the Days for the Classes")
 
     if st.button("Add Instructor"):
         new_instructor = {
@@ -88,25 +88,42 @@ def main():
     st.markdown("""
         <style>
         body {
-            background-color: #f4f4f9;
+            background: linear-gradient(135deg, #FFBC00, #FF6F00);
             font-family: 'Arial', sans-serif;
-        }
-        .sidebar .sidebar-content {
-            background-color: #2D3E50;
+            color: #fff;
         }
         .stButton>button {
-            background-color: #4CAF50;
+            background-color: #0078D4;
             color: white;
             font-weight: bold;
+            border-radius: 8px;
+            padding: 12px 24px;
         }
         .stButton>button:hover {
-            background-color: #45a049;
+            background-color: #005A8B;
+        }
+        .sidebar .sidebar-content {
+            background-color: #FF5E14;
+            color: #fff;
+        }
+        .sidebar .sidebar-header {
+            color: #fff;
+        }
+        .stTextInput input {
+            background-color: #F5F5F5;
+            color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        h1, h2, h3 {
+            color: #FFFFFF;
         }
         .footer {
             font-size: 12px;
             text-align: center;
             color: #999;
-            margin-top: 20px;
+            margin-top: 30px;
         }
         </style>
     """, unsafe_allow_html=True)
