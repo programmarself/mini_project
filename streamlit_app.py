@@ -152,7 +152,7 @@ def main():
         display_instructors()
 
     elif choice == 'View Instructor Details':
-        instructor_number = st.number_input("Enter Instructor Number (1-3)", min_value=1, max_value=len(instructors), step=1) - 1
+        instructor_number = st.number_input("Enter Instructor Number (1-4)", min_value=1, max_value=len(instructors), step=1) - 1
         if instructor_number is not None:
             view_instructors_info(instructor_number)
 
@@ -160,7 +160,7 @@ def main():
         add_instructor()
 
     elif choice == 'Update Instructor Details':
-        instructor_number = st.number_input("Enter Instructor Number (1-3)", min_value=1, max_value=len(instructors), step=1) - 1
+        instructor_number = st.number_input("Enter Instructor Number (1-4)", min_value=1, max_value=len(instructors), step=1) - 1
         if instructor_number is not None:
             update_instructor(instructor_number)
 
