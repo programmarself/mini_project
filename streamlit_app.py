@@ -15,7 +15,7 @@ instructors = [
      'linkedin': 'https://www.linkedin.com/in/iubaidrmn/', 'github': 'https://github.com/',
      'classes': 'Tuesday, Thursday'},
     {'name': 'Laiba Asif', 'subject': 'Python | AI Enthusiast | Data analyst',
-     'address': 'Jhang District, Punjab, Pakistan  ', 'contact': 'laibasif99@gmail.com',
+     'address': 'Jhang District, Punjab, Pakistan', 'contact': 'laibasif99@gmail.com',
      'linkedin': 'https://www.linkedin.com/in/laiba-asif-8544a0277/', 'github': 'https://github.com/',
      'classes': 'Tuesday, Thursday'}
 ]
@@ -24,17 +24,17 @@ instructors = [
 def display_instructors():
     st.subheader('Our Beloved Python For Beginners Instructors:')
     for idx, instructor in enumerate(instructors, 1):
-        st.markdown(f"<p style='font-size: 18px; color: #1e90ff;'><b>{idx}. {instructor['name']}</b></p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 18px; color: #007B55;'><b>{idx}. {instructor['name']}</b></p>", unsafe_allow_html=True)
 
 # Function to display instructor's detailed information
 def view_instructors_info(instructor_number):
     instructor = instructors[instructor_number]
-    st.markdown(f"<h3 style='color: #ff0000;'>{instructor['name']}</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='color: #007B55;'>{instructor['name']}</h3>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Subject:</b> {instructor['subject']}</p>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Address:</b> {instructor['address']}</p>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Contact:</b> {instructor['contact']}</p>", unsafe_allow_html=True)
-    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>LinkedIn:</b> <a href='{instructor['linkedin']}' style='color: #ff6347;'>LinkedIn Profile</a></p>", unsafe_allow_html=True)
-    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>GitHub:</b> <a href='{instructor['github']}' style='color: #ff6347;'>GitHub Profile</a></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>LinkedIn:</b> <a href='{instructor['linkedin']}' style='color: #007B55;'>LinkedIn Profile</a></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>GitHub:</b> <a href='{instructor['github']}' style='color: #007B55;'>GitHub Profile</a></p>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size: 16px; color: #505050;'><b>Classes:</b> {instructor['classes']}</p>", unsafe_allow_html=True)
 
 # Function to add a new instructor
@@ -92,22 +92,22 @@ def main():
     st.markdown("""
         <style>
         body {
-            background-color: #f4f4f4;
+            background-color: #e8f5e9;
             font-family: 'Arial', sans-serif;
             color: #333;
         }
         .stButton>button {
-            background-color: #007BFF;
+            background-color: #007B55;
             color: white;
             font-weight: bold;
             border-radius: 8px;
             padding: 12px 24px;
         }
         .stButton>button:hover {
-            background-color: #0056b3;
+            background-color: #005e46;
         }
         .sidebar .sidebar-content {
-            background-color: #0056b3;
+            background-color: #007B55;
             color: #fff;
         }
         .sidebar .sidebar-header {
@@ -121,7 +121,7 @@ def main():
             border: 1px solid #ddd;
         }
         h1, h2, h3 {
-            color: #007BFF;
+            color: #007B55;
         }
         .footer {
             font-size: 14px;
@@ -130,16 +130,26 @@ def main():
             margin-top: 30px;
         }
         .footer a {
-            color: #007BFF;
+            color: #007B55;
             text-decoration: none;
         }
         .footer a:hover {
-            color: #0056b3;
+            color: #005e46;
         }
         </style>
     """, unsafe_allow_html=True)
 
-    st.title("Instructors Management System")
+    # Header with logo and title
+    st.markdown("""
+        <div style='text-align:center;'>
+            <img src='https://via.placeholder.com/150' alt='Logo' style='width:150px;'>
+            <h1>Instructors Management System</h1>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Banner image
+    st.image("https://via.placeholder.com/800x200", use_column_width=True)
+
     st.markdown("---")
 
     # Sidebar for navigation
