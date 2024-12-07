@@ -91,59 +91,48 @@ def main():
     # Custom CSS for styling
     st.markdown("""
         <style>
-        /* Custom Top Horizontal Menu */
-        .top-menu {
-            display: flex;
-            justify-content: center;
-            background-color: #0056b3;
-            color: white;
-            padding: 10px 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 10;
-        }
-
-        .top-menu a {
-            color: white;
-            font-size: 16px;
-            margin-right: 20px;
-            text-decoration: none;
-        }
-
-        .top-menu a:hover {
-            color: #ff6347;
-        }
-
-        .content {
-            margin-top: 60px; /* Space for the fixed top menu */
-        }
-
-        /* General Body Styling */
         body {
             background-color: #f4f4f4;
             font-family: 'Arial', sans-serif;
             color: #333;
         }
-
+        .stButton>button {
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 12px 24px;
+        }
+        .stButton>button:hover {
+            background-color: #0056b3;
+        }
+        .sidebar .sidebar-content {
+            background-color: #0056b3;
+            color: #fff;
+        }
+        .sidebar .sidebar-header {
+            color: #fff;
+        }
+        .stTextInput input {
+            background-color: #ffffff;
+            color: #333;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
         h1, h2, h3 {
             color: #007BFF;
         }
-
-        /* Footer Styling */
         .footer {
             font-size: 14px;
             text-align: center;
             color: #777;
             margin-top: 30px;
         }
-
         .footer a {
             color: #007BFF;
             text-decoration: none;
         }
-
         .footer a:hover {
             color: #0056b3;
         }
@@ -153,23 +142,10 @@ def main():
     st.title("Instructors Management System")
     st.markdown("---")
 
-    # Top Navigation Menu
-    st.markdown("""
-        <div class="top-menu">
-            <a href="javascript:void(0)" onclick="window.location.reload();">Home</a>
-            <a href="javascript:void(0)" onclick="window.location.reload();">View All Instructors</a>
-            <a href="javascript:void(0)" onclick="window.location.reload();">View Instructor Details</a>
-            <a href="javascript:void(0)" onclick="window.location.reload();">Add New Instructor</a>
-            <a href="javascript:void(0)" onclick="window.location.reload();">Update Instructor Details</a>
-        </div>
-    """, unsafe_allow_html=True)
-
-    # Content Container
-    st.markdown("<div class='content'></div>", unsafe_allow_html=True)
-
-    # Now, selecting options below the top menu
+    # Sidebar for navigation
+    st.sidebar.title("Menu")
     menu = ['View All Instructors', 'View Instructor Details', 'Add New Instructor', 'Update Instructor Details']
-    choice = st.radio("Select an option", menu)
+    choice = st.sidebar.radio("Select an option", menu)
 
     if choice == 'View All Instructors':
         display_instructors()
