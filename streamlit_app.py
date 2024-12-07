@@ -18,7 +18,6 @@ instructors = [
      'address': 'Jhang District, Punjab, Pakistan  ', 'contact': 'laibasif99@gmail.com',
      'linkedin': 'https://www.linkedin.com/in/laiba-asif-8544a0277/', 'github': 'https://github.com/',
      'classes': 'Tuesday, Thursday'}
-
 ]
 
 # Function to display all instructors
@@ -93,54 +92,54 @@ def main():
     st.markdown("""
         <style>
         body {
-            background: linear-gradient(145deg, #ff8c00, #ff6347);
-            font-family: 'Roboto', sans-serif;
-            color: #fff;
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            color: #333;
         }
         .stButton>button {
-            background-color: #ff6347;
+            background-color: #007BFF;
             color: white;
             font-weight: bold;
             border-radius: 8px;
             padding: 12px 24px;
         }
         .stButton>button:hover {
-            background-color: #ff4500;
+            background-color: #0056b3;
         }
         .sidebar .sidebar-content {
-            background-color: #ff6a00;
+            background-color: #0056b3;
             color: #fff;
         }
         .sidebar .sidebar-header {
             color: #fff;
         }
         .stTextInput input {
-            background-color: #f5f5f5;
+            background-color: #ffffff;
             color: #333;
-            padding: 10px;
+            padding: 12px;
             border-radius: 8px;
             border: 1px solid #ddd;
         }
         h1, h2, h3 {
-            color: #ff0000; /* Red color for header */
+            color: #007BFF;
         }
         .footer {
             font-size: 14px;
             text-align: center;
-            color: #ddd;
+            color: #777;
             margin-top: 30px;
         }
         .footer a {
-            color: #ff6347;
+            color: #007BFF;
             text-decoration: none;
         }
         .footer a:hover {
-            color: #ff4500;
+            color: #0056b3;
         }
         </style>
     """, unsafe_allow_html=True)
 
-    st.title("Instructors Management System (IMS)")
+    st.title("Instructors Management System")
     st.markdown("---")
 
     # Sidebar for navigation
