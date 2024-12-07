@@ -91,13 +91,10 @@ def main():
     # Custom CSS for styling
     st.markdown("""
         <style>
-        /* Move Sidebar to the Top */
-        .css-1lcbqh6 {display: none;}  /* Hide the default sidebar */
-        
+        /* Custom Top Horizontal Menu */
         .top-menu {
             display: flex;
             justify-content: center;
-            align-items: center;
             background-color: #0056b3;
             color: white;
             padding: 10px 20px;
@@ -120,9 +117,10 @@ def main():
         }
 
         .content {
-            margin-top: 60px;
+            margin-top: 60px; /* Space for the fixed top menu */
         }
 
+        /* General Body Styling */
         body {
             background-color: #f4f4f4;
             font-family: 'Arial', sans-serif;
@@ -133,6 +131,7 @@ def main():
             color: #007BFF;
         }
 
+        /* Footer Styling */
         .footer {
             font-size: 14px;
             text-align: center;
@@ -166,10 +165,9 @@ def main():
     """, unsafe_allow_html=True)
 
     # Content Container
-    with st.container():
-        st.markdown("<div class='content'></div>", unsafe_allow_html=True)
+    st.markdown("<div class='content'></div>", unsafe_allow_html=True)
 
-    # Sidebar removed, now the content area is direct below the top menu
+    # Now, selecting options below the top menu
     menu = ['View All Instructors', 'View Instructor Details', 'Add New Instructor', 'Update Instructor Details']
     choice = st.radio("Select an option", menu)
 
